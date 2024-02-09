@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('background.jpg'); /* Replace 'background-image.jpg' with your image path */
+            background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with your image path */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -29,16 +29,43 @@
             width: 100%;
             height: 500px; /* Adjust height as needed */
         }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #e65c00;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to The Sweet Side</h1>
         <p>Check out our delicious menu!</p>
-        <object data="Menu.pdf" type="application/pdf" class="pdf-object">
+        <object data="The Sweet Side Menu.pdf" type="application/pdf" class="pdf-object">
             <p>Sorry, your browser doesn't support embedded PDFs.</p>
-            <p><a href="Menu.pdf">Click here to download the PDF file.</a></p>
+            <p><a href="The Sweet Side Menu.pdf">Click here to download the PDF file.</a></p>
         </object>
+        <div class="button-container">
+            <button id="viewOffers">Available Offers</button> <!-- Button to view offers -->
+        </div>
     </div>
+    
+    <script>
+        // JavaScript to redirect to the image when the button is clicked
+        const viewOffersButton = document.getElementById('viewOffers');
+
+        viewOffersButton.addEventListener('click', function() {
+            window.location.href = 'offer_image.jpg'; // Replace 'offer_image.jpg' with the path to your image
+        });
+    </script>
 </body>
 </html>
