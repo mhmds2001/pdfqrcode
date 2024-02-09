@@ -48,6 +48,23 @@
         .button-container button:hover {
             background-color: #e65c00;
         }
+
+        /* Media queries for mobile view */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px; /* Reduce padding for smaller screens */
+            }
+            h1 {
+                font-size: 24px; /* Decrease font size for smaller screens */
+            }
+            .pdf-object {
+                height: 400px; /* Adjust height for smaller screens */
+            }
+            .button-container button {
+                padding: 8px 16px; /* Adjust button padding for smaller screens */
+                font-size: 14px; /* Decrease font size for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
