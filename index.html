@@ -9,10 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('background.jpg'); /* Replace 'background-image.jpg' with your image path */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #e49de9; /* Solid background color */
         }
         .container {
             max-width: 800px;
@@ -21,6 +18,7 @@
             background-color: rgba(255, 255, 255, 0.8); /* Background color with transparency */
             padding: 20px;
             border-radius: 10px;
+            position: relative; /* Position relative for absolute positioning of image */
         }
         h1 {
             color: #ffd700; /* Golden color */
@@ -29,33 +27,25 @@
             width: 100%;
             height: 500px; /* Adjust height as needed */
         }
-        .button-container {
-            margin-top: 20px;
-        }
-        .button-container button {
-            padding: 10px 20px;
-            background-color: #ff6600;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .button-container button:hover {
-            background-color: #e65c00;
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Adjust image width as needed */
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="logo.png" alt="Logo" class="logo"> <!-- Image in the top-left corner -->
         <h1>Welcome to The Sweet Side</h1>
         <p>Check out our delicious menu!</p>
-        <object data="Menu.pdf" type="application/pdf" class="pdf-object">
+        <object data="The Sweet Side Menu.pdf" type="application/pdf" class="pdf-object">
             <p>Sorry, your browser doesn't support embedded PDFs.</p>
-            <p><a href="Menu.pdf">Click here to download the PDF file.</a></p>
+            <p><a href="The Sweet Side Menu.pdf">Click here to download the PDF file.</a></p>
         </object>
         <div class="button-container">
-            <button id="viewOffers">Click here for University Student Discount</button> <!-- Button to view offers -->
+            <button id="viewOffers">Click for your Student Discount</button> <!-- Button to view offers -->
         </div>
     </div>
     
