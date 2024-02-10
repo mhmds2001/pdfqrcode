@@ -38,36 +38,48 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin: 10px;
         }
         .button-container button:hover {
             background-color: #e65c00;
+        }
+
+        /* Media queries for mobile view */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px; /* Reduce padding for smaller screens */
+            }
+            h1 {
+                margin-top: 20px; /* Adjusted margin for smaller screens */
+            }
+            .pdf-object {
+                height: 400px; /* Adjust height for smaller screens */
+            }
+            .button-container button {
+                padding: 8px 16px; /* Adjust button padding for smaller screens */
+                font-size: 14px; /* Decrease font size for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to The Sweet Side</h1>
-        <p>Check out our delicious menus!</p>
+        <p>Check out our delicious menu!</p>
+        <object data="Menu.pdf" type="application/pdf" class="pdf-object">
+            <p>Sorry, your browser doesn't support embedded PDFs.</p>
+            <p><a href="Menu.pdf">Click here to download the PDF file.</a></p>
+        </object>
         <div class="button-container">
-            <button id="viewSweetSideMenu">The Sweet Side Menu</button>
-            <button id="viewBlackWhiteMenu">Black & White Menu</button>
+            <button id="viewOffers">Click for your Student Discount</button> <!-- Button to view offers -->
         </div>
     </div>
     
     <script>
-        // JavaScript to redirect to the menu.pdf when the "The Sweet Side Menu" button is clicked
-        const viewSweetSideMenuButton = document.getElementById('viewSweetSideMenu');
+        // JavaScript to redirect to the image when the button is clicked
+        const viewOffersButton = document.getElementById('viewOffers');
 
-        viewSweetSideMenuButton.addEventListener('click', function() {
-            window.location.href = 'Menu.pdf'; // Replace 'menu.pdf' with the path to your menu PDF
-        });
-
-        // JavaScript to redirect to another PDF when the "Black & White Menu" button is clicked
-        const viewBlackWhiteMenuButton = document.getElementById('viewBlackWhiteMenu');
-
-        viewBlackWhiteMenuButton.addEventListener('click', function() {
-            window.location.href = 'black_white_menu.pdf'; // Replace 'black_white_menu.pdf' with the path to your Black & White menu PDF
+        viewOffersButton.addEventListener('click', function() {
+            window.location.href = 'discount.jpeg'; // Replace 'discount.jpeg' with the path to your image
         });
     </script>
 </body>
